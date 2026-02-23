@@ -1,0 +1,23 @@
+services:
+  postgres-jaya-institut:
+    image: postgres:16
+    container_name: postgres-jaya-institut
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    ports:
+      - "${POSTGRES_PORT}:5432"
+    volumes:
+      - postgres_jaya_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  metabase:
+    image: metabase/metabase:latest
+    container_name: metabase_jaya_institut
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+
+volumes:
+  postgres_jaya_data:
