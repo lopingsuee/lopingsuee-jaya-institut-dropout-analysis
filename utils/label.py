@@ -1,6 +1,3 @@
-# =========================
-# Helper Function
-# =========================
 
 def select_with_labels(label, mapping, default_value=None, key=None):
     import streamlit as st
@@ -23,10 +20,6 @@ def select_with_labels(label, mapping, default_value=None, key=None):
         key=key
     )
 
-
-# =========================
-# Binary Maps
-# =========================
 
 YES_NO_MAP = {
     1: "Yes",
@@ -52,10 +45,6 @@ MARITAL_STATUS_MAP = {
     6: "Legally separated",
 }
 
-# =========================
-# Course Map
-# =========================
-
 COURSE_MAP = {
     33: "Biofuel Production Technologies",
     171: "Animation and Multimedia Design",
@@ -76,9 +65,6 @@ COURSE_MAP = {
     9991: "Management (evening attendance)",
 }
 
-# =========================
-# Application Mode Map
-# =========================
 
 APPLICATION_MODE_MAP = {
     1: "1st phase - general contingent",
@@ -101,9 +87,6 @@ APPLICATION_MODE_MAP = {
     57: "Change of institution/course (International)",
 }
 
-# =========================
-# Nationality Map
-# =========================
 
 NATIONALITY_MAP = {
     1: "Portuguese",
